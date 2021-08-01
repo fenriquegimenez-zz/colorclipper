@@ -3,13 +3,20 @@ import { PhotoshopPicker, SketchPicker } from "react-color";
 import { isDesktop } from "react-device-detect";
 
 import "./App.css";
+import useWindowSize from "./hooks/useWindowSize";
 
 function App() {
   const [color, setColor] = useState("#334756");
+  const windowSize = useWindowSize();
+
+  console.log(windowSize);
 
   return (
     <div className="App">
-      <header className="header">
+      <nav className="navbar">
+        <h1 className="logo">Color Clipper</h1>
+      </nav>
+      <header className="header" style={{ backgroundColor: color }}>
         {isDesktop ? (
           <PhotoshopPicker
             className="colorpicker"
