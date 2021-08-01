@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.main {
+}
+
+.header .logo {
+  padding: 2em;
+}
