@@ -6,28 +6,35 @@ import "./App.css";
 import useWindowSize from "./hooks/useWindowSize";
 
 function App() {
-  const [color, setColor] = useState("#334756");
-  const windowSize = useWindowSize();
+  const [currentColor, setCurrentColor] = useState("#334756");
+  const [colors, setColors] = useState({
+    firs: "#FF4848",
+    second: "#00C1D4",
+    third: "#FFF338",
+    quarter: "#FF4C29",
+  });
 
-  console.log(windowSize);
+  const windowSize = useWindowSize(); // get the windows width and height size
 
   return (
     <div className="App">
       <nav className="navbar">
-        <h1 className="logo">Color Clipper</h1>
+        <h1 className="logo" style={{ color: currentColor }}>
+          Color Clipper
+        </h1>
       </nav>
-      <header className="header" style={{ backgroundColor: color }}>
-        {isDesktop ? (
+      <header className="header" style={{ backgroundColor: currentColor }}>
+        {windowSize.width >= 700 ? (
           <PhotoshopPicker
             className="colorpicker"
-            color={color}
-            onChange={(updateColor) => setColor(updateColor.hex)}
+            color={currentColor}
+            onChange={(updateColor) => setCurrentColor(updateColor.hex)}
           />
         ) : (
           <SketchPicker
             className="colorpicker"
-            color={color}
-            onChange={(updateColor) => setColor(updateColor.hex)}
+            color={currentColor}
+            onChange={(updateColor) => setCurrentColor(updateColor.hex)}
           />
         )}
       </header>
