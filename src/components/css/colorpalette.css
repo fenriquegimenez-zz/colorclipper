@@ -1,0 +1,15 @@
+.colorpalette {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 250px));
+  grid-template-rows: minmax(50px, 70px);
+  justify-content: center;
+  max-height: 400px;
+  max-width: 1600px;
+  width: 100%;
+}
+
+.color {
+  display: flex;
+  justify-content: center;
+}

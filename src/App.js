@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { PhotoshopPicker, SketchPicker } from "react-color";
-import { isDesktop } from "react-device-detect";
+import ColorPicker from "./components/ColorPicker";
+import ColorPalette from "./components/ColorPalette";
 
 import "./App.css";
-import useWindowSize from "./hooks/useWindowSize";
 
 function App() {
   const [currentColor, setCurrentColor] = useState("#334756");
@@ -14,7 +13,9 @@ function App() {
     quarter: "#FF4C29",
   });
 
-  const windowSize = useWindowSize(); // get the windows width and height size
+  const handleOnChange = (color) => {
+    setCurrentColor(color);
+  };
 
   return (
     <div className="App">
@@ -24,21 +25,14 @@ function App() {
         </h1>
       </nav>
       <header className="header" style={{ backgroundColor: currentColor }}>
-        {windowSize.width >= 700 ? (
-          <PhotoshopPicker
-            className="colorpicker"
-            color={currentColor}
-            onChange={(updateColor) => setCurrentColor(updateColor.hex)}
-          />
-        ) : (
-          <SketchPicker
-            className="colorpicker"
-            color={currentColor}
-            onChange={(updateColor) => setCurrentColor(updateColor.hex)}
-          />
-        )}
+        <ColorPicker
+          currentColor={currentColor}
+          handleOnChange={handleOnChange}
+        />
       </header>
-      <main className="main"></main>
+      <main className="main">
+        <ColorPalette className="colorpalette" />
+      </main>
     </div>
   );
 }
