@@ -1,8 +1,9 @@
 .colorpalette {
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
-  grid-template-rows: minmax(50px, 70px);
+  grid-template-columns: repeat(auto-fit, minmax(80px, 250px));
+  grid-template-rows: repeat(auto-fit, 50px);
+  grid-auto-rows: 50px;
   justify-content: center;
   max-height: 400px;
   max-width: 1600px;
@@ -11,5 +12,33 @@
 
 .color {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.color:hover {
+  transform: scale(105%);
+  filter: drop-shadow(1px 5px 10px rgba(0, 0, 0, 0.4));
+}
+
+.seconpalette .colorpalette {
+  grid-template-rows: repeat(auto-fit, 70px);
+  grid-auto-rows: 70px;
+  max-height: auto;
+  margin-top: 1.5em;
+}
+
+p {
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.visible {
+  opacity: 1;
+}
+
+.invisible {
+  opacity: 0;
 }
