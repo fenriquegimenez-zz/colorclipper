@@ -24,12 +24,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2em;
 }
 
 .footer {
   background-color: rgba(0, 0, 0, 1);
   color: rgb(99, 99, 99);
-  padding: 7em 0;
+  padding: 2em 0;
   display: flex;
   justify-content: center;
   align-items: center;
