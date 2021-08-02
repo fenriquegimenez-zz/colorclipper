@@ -3,7 +3,7 @@ import tinycolor2 from "tinycolor2";
 
 const Color = ({ color, index }) => {
   const [alert, setAlert] = useState(false);
-  const [brightness, setBrightness] = useState(() => {
+  const [brightness] = useState(() => {
     const currentColor = tinycolor2(color);
     return currentColor.getBrightness();
   });

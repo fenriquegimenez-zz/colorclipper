@@ -4,6 +4,7 @@ import ColorPalette from "./components/ColorPalette";
 import TheoryColor from "./components/TheoryColor";
 import colorGenerator from "./utitly/ColorGenerator";
 import Values from "values.js";
+import { FaGithub, FaTwitter } from "react-icons/fa";
 import Logo from "./logo.svg";
 
 import "./App.css";
@@ -72,6 +73,27 @@ function App() {
           />
         </section>
       </main>
+      <footer className="footer">
+        <nav className="footer--navbar">
+          <p className="social">Author: FranklinSerif</p>
+          <p className="social">
+            <a href="https://github.com/FranklinSerif">
+              <FaGithub className="social-icons" />
+            </a>
+          </p>
+          <p className="social">
+            <a href="https://twitter.com/FranklinSerif">
+              <FaTwitter className="social-icons" />
+            </a>
+          </p>
+        </nav>
+        <section className="pageinfo">
+          <img src={Logo} alt="Color Clipper" className="logo-image" />
+          <h1 className="logo" style={{ color: currentColor }}>
+            Color Clipper
+          </h1>
+        </section>
+      </footer>
     </div>
   );
 }
