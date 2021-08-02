@@ -24,15 +24,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 .footer {
-  height: 20vh;
   background-color: rgba(0, 0, 0, 1);
   color: rgb(99, 99, 99);
-  margin-top: 8em;
-  padding: 7em;
+  padding: 7em 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,10 +38,11 @@
 
 .footer .footer--navbar {
   width: 100%;
-  max-width: 300px;
+  max-width: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 1em;
 }
 
 /*Elements styles*/
@@ -77,7 +75,13 @@
   text-align: center;
 }
 
+.title3 {
+  font-weight: 100;
+  font-size: 1.4em;
+}
+
 .social {
+  margin-top: 1em;
   text-align: center;
 }
 
@@ -97,6 +101,11 @@
 .social-icons {
   font-size: 2em;
   color: white;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.social-icons:hover {
+  opacity: 0.5;
 }
 
 @media (min-width: 700px) {

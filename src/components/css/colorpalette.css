@@ -5,9 +5,9 @@
   grid-template-rows: repeat(auto-fit, 50px);
   grid-auto-rows: 50px;
   justify-content: center;
-  max-height: 400px;
   max-width: 1600px;
   width: 100%;
+  padding-bottom: 2em;
 }
 
 .color {
@@ -27,7 +27,6 @@
 .seconpalette .colorpalette {
   grid-template-rows: repeat(auto-fit, 70px);
   grid-auto-rows: 70px;
-  max-height: auto;
   margin-top: 1.5em;
 }
 
@@ -41,4 +40,10 @@ p {
 
 .invisible {
   opacity: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .colorpalette {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 320px));
+  }
 }

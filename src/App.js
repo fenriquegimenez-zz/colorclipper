@@ -74,8 +74,8 @@ function App() {
         </section>
       </main>
       <footer className="footer">
+        <h3 className="title3">FranklinSerif</h3>
         <nav className="footer--navbar">
-          <p className="social">Author: FranklinSerif</p>
           <p className="social">
             <a href="https://github.com/FranklinSerif">
               <FaGithub className="social-icons" />
