@@ -30,8 +30,16 @@
 /*Elements styles*/
 .navbar .logo {
   font-weight: 100;
-  font-size: 34px;
+  font-size: 30px;
   color: #787a91;
+  text-transform: uppercase;
+  font-family: "Righteous", cursive;
+}
+
+.navbar .logo-image {
+  width: 5%;
+  height: auto;
+  margin-right: 1em;
 }
 
 .header .colorpicker {

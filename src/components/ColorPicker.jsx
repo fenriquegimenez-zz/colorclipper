@@ -1,22 +1,25 @@
 import { PhotoshopPicker, SketchPicker } from "react-color";
 import useWindowSize from "../hooks/useWindowSize";
 
-const ColorPicker = (props) => {
+const ColorPicker = ({ currentColor, handleOnChange }) => {
   const windowSize = useWindowSize(); // get the windows width and height size
+
+  const handleAccept = () => {};
 
   return (
     <>
       {windowSize.width >= 700 ? (
         <PhotoshopPicker
+          header="Color Clipper"
           className="colorpicker"
-          color={props.currentColor}
-          onChange={(updateColor) => props.handleOnChange(updateColor)}
+          color={currentColor}
+          onChange={(updateColor) => handleOnChange(updateColor)}
         />
       ) : (
         <SketchPicker
           className="colorpicker"
-          color={props.currentColor}
-          onChange={(updateColor) => props.handleOnChange(updateColor)}
+          color={currentColor}
+          onChange={(updateColor) => handleOnChange(updateColor)}
         />
       )}
     </>
